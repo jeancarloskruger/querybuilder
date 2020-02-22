@@ -1,0 +1,13 @@
+{
+  "tableName": "Product",
+  "selectcolumns": [ "Id", "Name", "Price" ],
+  "Filtercolumns": [
+    {
+      "operator": "BETWEEN",
+      "fieldName": "Price",
+      "typeFilter": "AND",
+      "fieldValueFirst": "10",
+      "fieldValueSecond": "20"
+    }
+  ]
+}

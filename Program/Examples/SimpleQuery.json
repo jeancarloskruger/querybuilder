@@ -1,0 +1,18 @@
+{
+  "tableName": "Product",
+  "selectcolumns": [ "Id", "Name", "Price" ],
+  "Filtercolumns": [
+    {
+      "operator": ">",
+      "fieldName": "Price",
+      "typeFilter": "AND",
+      "fieldValue": "14"
+    },
+    {
+      "operator": "=",
+      "fieldName": "Name",
+      "typeFilter": "AND",
+      "fieldValue": "Test"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "tableName": "Product",
+  "selectcolumns": [ "Id", "Name", "Price" ],
+  "Filtercolumns": [
+    {
+      "operator": ">",
+      "fieldName": "Price",
+      "typeFilter": "AND",
+      "fieldValue": "14"
+    },
+    {
+      "operator": "=",
+      "fieldName": "Name",
+      "typeFilter": "AND",
+      "fieldValue": "Test"
+    },
+    {
+      "operator": "<",
+      "fieldName": "Price",
+      "typeFilter": "AND",
+      "JoinTable": "HistoryPrice",
+      "JoinTableColumn": "LastPrice"
+    },
+    {
+      "operator": "BETWEEN",
+      "fieldName": "Price",
+      "typeFilter": "AND",
+      "fieldValueFirst": "10",
+      "fieldValueSecond": "20"
+    },
+    {
+      "operator": "> ALL",
+      "fieldName": "price",
+      "typeFilter": "AND",
+      "subquery": {
+        "tableName": "HistoryPrice",
+        "selectcolumns": [ "LastPrice" ],
+        "Filtercolumns": [
+          {
+            "operator": "=",
+            "fieldName": "LastPrice",
+            "typeFilter": "AND",
+            "fieldValue": "100"
+          }
+        ]
+      }
+    }
+  ],
+  "TableJoins": [
+    {
+      "tableName": "HistoryPrice",
+      "typeJoin": "INNER",
+      "RerefenceTableFieldName": "Id",
+      "FieldName": "ProductId"
+    }
+  ]
+}
