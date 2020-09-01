@@ -44,6 +44,23 @@
           }
         ]
       }
+    },
+    {
+      "operator": ">= ANY",
+      "fieldName": "price",
+      "typeFilter": "AND",
+      "subquery": {
+        "tableName": "HistoryPrice",
+        "selectcolumns": [ "LastPrice" ],
+        "Filtercolumns": [
+          {
+            "operator": "=",
+            "fieldName": "LastPrice",
+            "typeFilter": "AND",
+            "fieldValue": "100"
+          }
+        ]
+      }
     }
   ],
   "TableJoins": [

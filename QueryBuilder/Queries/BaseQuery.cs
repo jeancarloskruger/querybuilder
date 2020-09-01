@@ -9,5 +9,6 @@ namespace QueryBuilder
         public string TableName { get; set; }
         public List<string> SelectColumns { get; set; }
         public List<TableJoin> TableJoins { get; set; }
+
     }
 }

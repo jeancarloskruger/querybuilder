@@ -10,7 +10,7 @@
       "fieldValueSecond": "20"
     },
     {
-      "operator": "> ALL",
+      "operator": "IN",
       "fieldName": "price",
       "typeFilter": "AND",
       "subquery": {

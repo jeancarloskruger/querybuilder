@@ -2,7 +2,7 @@
   "profiles": {
     "Program": {
       "commandName": "Project",
-      "commandLineArgs": "-fileJson C:\\Projetos\\Jean\\QueryBuilder\\Program\\Examples\\FullQuery.json"
+      "commandLineArgs": "-fileJson C:\\Projetos\\Jean\\querybuilder\\Program\\Examples\\SimpleQuery.json"
     }
   }
 }

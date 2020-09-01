@@ -10,7 +10,7 @@ namespace QueryBuilder
         public string FieldValueSecond { get; set; }
 
         public BasicBetweenFilterColumn(ReaderFilterColumns filter)
-            : base(filter.Operator, filter.FieldName, filter.TypeFilter)
+            : base(filter.Operator, filter.FieldName, filter.TypeFilter, filter.TypeColumn)
         {
             FieldValueFirst = filter.FieldValueFirst;
             FieldValueSecond = filter.FieldValueSecond;
@@ -18,7 +18,7 @@ namespace QueryBuilder
 
         public override string FilterCommand()
         {
-            return $"{FieldName} {Operator} {FieldValueFirst} AND {FieldValueSecond}";
+            return $"{FieldName} {Operator} {StringHelper.ConvertFieldValueToSpeficType(TypeColumn, FieldValueFirst)} AND {StringHelper.ConvertFieldValueToSpeficType(TypeColumn, FieldValueSecond)}";
         }
     }
 }

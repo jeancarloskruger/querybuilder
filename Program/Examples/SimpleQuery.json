@@ -6,12 +6,14 @@
       "operator": ">",
       "fieldName": "Price",
       "typeFilter": "AND",
+      "typecolumn":  "number",
       "fieldValue": "14"
     },
     {
       "operator": "=",
       "fieldName": "Name",
       "typeFilter": "AND",
+      "typecolumn": "string",
       "fieldValue": "Test"
     }
   ]

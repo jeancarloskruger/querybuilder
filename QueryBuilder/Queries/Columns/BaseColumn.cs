@@ -10,12 +10,13 @@ namespace QueryBuilder
         public string Operator { get; set; }
         public string FieldName { get; set; }
         public string TypeFilter { get; set; }
-
-        public BaseColumn(string aOperator, string fieldName, string typeFilter)
+        public string TypeColumn { get; set; }
+        public BaseColumn(string aOperator, string fieldName, string typeFilter, string typeColumn)
         {
             Operator = aOperator;
             FieldName = fieldName;
             TypeFilter = typeFilter;
+            TypeColumn = typeColumn;
         }
         public virtual string FilterCommand()
         {

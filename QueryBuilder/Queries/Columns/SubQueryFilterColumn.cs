@@ -7,7 +7,7 @@ namespace QueryBuilder
     public class SubQueryFilterColumn : BaseColumn
     {
         public SubQueryFilterColumn(ReaderFilterColumns filter)
-            : base(filter.Operator, filter.FieldName, filter.TypeFilter)
+            : base(filter.Operator, filter.FieldName, filter.TypeFilter, filter.TypeColumn)
         {
             SubQuery = new QueryFactory(filter.SubQuery);
         }

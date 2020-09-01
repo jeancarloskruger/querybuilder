@@ -10,7 +10,7 @@ namespace QueryBuilder
         public string JoinTableColumn { get; set; }
 
         public BasicFilterWithTableJoinColumn(ReaderFilterColumns filter)
-            : base(filter.Operator, filter.FieldName, filter.TypeFilter)
+            : base(filter.Operator, filter.FieldName, filter.TypeFilter, filter.TypeColumn)
         {
             JoinTable = filter.JoinTable;
             JoinTableColumn = filter.JoinTableColumn;
